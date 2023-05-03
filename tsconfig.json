@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "jsx": "react",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "strict": true,
+    "sourceMap": true,
+    "target": "esnext",
+    "paths": {
+      "@styles/*":["./src/styles/*"],
+      "@assets/*":["./src/assets/*"]
+    }
+  },
+  "include": ["src","src/custom-svg.d.ts","src/custom-css.d.ts","src/custom-pdf.d.ts", "src/custom-png.d.ts"],
+  "exclude": [
+    "node_modules"
+  ]
+}

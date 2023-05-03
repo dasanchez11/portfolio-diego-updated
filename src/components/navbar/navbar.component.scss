@@ -1,0 +1,110 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/mixins.scss";
+
+.header {
+  height: $header-height;
+  background-color: $color-primary;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  &__scroll {
+    position: relative;
+    z-index: 10;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+  }
+
+  &__container {
+    margin: 0 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: $laptop-max-width;
+  }
+
+  &__links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__link {
+    padding: 0.7rem;
+    color: $color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: $border-radius;
+
+    @include for-tablet {
+      display: none;
+    }
+
+    &:hover {
+      background-color: rgba($color: $color-white, $alpha: 0.3);
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    fill: $color-white;
+    padding: 0.2rem;
+
+    @include for-tablet {
+      display: block;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba($color: $color-white, $alpha: 0.3);
+      border-radius: $border-radius;
+    }
+  }
+
+  &__mobile-menu {
+    top: $header-height;
+    position: absolute;
+    width: 100%;
+    display: none;
+    background-color: $color-primary;
+    z-index: 10;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+    // animation: header-show 0.5s;
+    animation: 0.5s alternate slidein;
+
+    @keyframes slidein {
+      from {
+        height: 0;
+        display: none;
+        margin-top: -100%;
+        // width: 300%;
+      }
+
+      to {
+        height: fit-content;
+        display: block;
+        // margin-left: 0%;
+        // width: 100%;
+      }
+    }
+
+    @include for-tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__mobile-link {
+    width: 100%;
+    padding: 1rem;
+    color: $color-white;
+    text-decoration: none;
+    text-align: center;
+    font-size: x-large;
+
+    &:hover {
+      background-color: rgba($color: $color-white, $alpha: 0.3);
+    }
+  }
+}

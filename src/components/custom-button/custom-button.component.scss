@@ -1,0 +1,39 @@
+@import "/src/styles/variables.scss";
+
+.button {
+  font-size: 1.3rem;
+  border-radius: $border-radius;
+  padding: 1rem;
+  box-shadow: 0 2rem 5rem rgba(black, 0.015);
+  border: 1px solid $color-tertiary;
+  text-decoration: none;
+
+  &__primary {
+    background-color: $color-tertiary;
+    color: $color-primary;
+
+    &:hover {
+      background-color: white;
+      border: 1px solid $color-white;
+      cursor: pointer;
+    }
+  }
+
+  &__secondary {
+    background-color: transparent;
+    border: 1px solid $color-tertiary;
+    color: $color-tertiary;
+
+    &:hover {
+      background-color: white;
+      border: 1px solid $color-white;
+      color: $color-primary;
+      cursor: pointer;
+    }
+  }
+  &:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+  }
+}

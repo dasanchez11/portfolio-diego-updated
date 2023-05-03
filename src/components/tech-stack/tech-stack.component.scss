@@ -1,0 +1,53 @@
+@import "/src/styles/variables.scss";
+
+.tech-stack {
+  margin: 1rem 0;
+  color: $color-tertiary;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem 2rem 2rem;
+
+  &__container {
+    margin: 0 auto;
+    max-width: $laptop-max-width;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  &__icon {
+    height: 7rem;
+    width: 7rem;
+    fill: $color-tertiary;
+
+    &:hover {
+      fill: $color-white;
+      color: $color-white;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+
+    &:hover {
+      .tech-stack__experience--name {
+        visibility: visible;
+      }
+    }
+  }
+
+  &__experience {
+    padding-top: 0.5rem;
+    font-weight: 200;
+
+    &--name {
+      font-weight: 200;
+      color: $color-white;
+      visibility: hidden;
+    }
+  }
+}

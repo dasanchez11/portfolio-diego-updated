@@ -1,0 +1,35 @@
+@import "/src/styles/variables.scss";
+
+.title {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  color: $color-tertiary;
+
+  &__text {
+    text-align: center;
+    position: relative;
+  }
+
+  &__text:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 3rem;
+    background-color: $color-tertiary;
+    position: absolute;
+    top: 50%;
+    right: -4rem;
+  }
+
+  &__text:before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 3rem;
+    background-color: $color-tertiary;
+    position: absolute;
+    top: 50%;
+    left: -4rem;
+  }
+}

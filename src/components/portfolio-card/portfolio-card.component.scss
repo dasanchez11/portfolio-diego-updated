@@ -1,0 +1,50 @@
+@import "/src/styles/variables.scss";
+
+.card {
+  background: $color-card-background;
+  height: 20rem;
+  border-radius: 0.5rem;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+
+  &__cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 3px;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    color: $color-white;
+    fill: $color-white;
+  }
+
+  &__title {
+    color: $color-tertiary;
+    text-align: center;
+    margin: 1.2rem 0 2rem;
+  }
+
+  &__technologies {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  &__technology {
+    text-align: center;
+  }
+
+  &__links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+}
